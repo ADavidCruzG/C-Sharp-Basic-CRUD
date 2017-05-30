@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Creación" Language="C#" MasterPageFile="~/masterPageCRUD.master" AutoEventWireup="true" CodeFile="create.aspx.cs" Inherits="create" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+<asp:Content ID="localHead" ContentPlaceHolderID="head" runat="Server">
     <script>
         $(document).ready(function () {
             $(".nav li").removeClass("active");
@@ -8,7 +8,7 @@
         });
     </script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+<asp:Content ID="localContent" ContentPlaceHolderID="mainContent" runat="Server">
     <div class="panel panel-primary">
         <div class="panel-heading">
             <h6 class="text-center">Crear nuevo equipo</h6>
@@ -48,11 +48,11 @@
                 <label class="control-label" for="txtStadium">Estadio</label>
                 <span class="input-icon">
                     <asp:TextBox ID="txtStadium" runat="server" class="form-control" placeholder="Estadio" required="true"></asp:TextBox>
-                    <i class="fa fa fa-home"></i>
+                    <i class="fa fa-home"></i>
                 </span>
             </div>
-            <div class="form-group text-center  col-sm-12">
-                <button id="btnCreate" runat="server" class="btn btn-sm btn-primary" type="submit" onserverclick="createTeam">
+            <div class="form-group text-center  col-sm-12 margin-top-15">
+                <button id="btnCreate" runat="server" class="btn btn-primary" type="submit" onserverclick="createTeam">
                     <i class="fa fa-floppy-o"></i>
                     <span class="hidden-xs"><b>Guardar equipo</b></span>
                 </button>

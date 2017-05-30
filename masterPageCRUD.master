@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CRUD básico</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css" />
@@ -15,24 +16,31 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">CRUD básico</a>
+<body style="background-color:azure">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="#">CRUD básico</a>
+                </div>
+                <div id="mainNav" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="home.aspx">Inicio</a></li>
+                        <li id="read"><a href="read.aspx">Listado</a></li>
+                        <li id="create"><a href="create.aspx">Nuevo</a></li>
+                    </ul>
+                </div>
             </div>
-            <ul class="nav navbar-nav">
-                <li id="home" class="active"><a href="home.aspx">Home</a></li>
-                <li id="create"><a href="create.aspx">Nuevo equipo</a></li>
-                <li id="read"><a href="read.aspx">Lista</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
+    </div>
     <form id="masterForm" runat="server">
         <div class="container">
             <div class="row margin-top-25">
                 <div class="col-lg-12">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
             </div>
